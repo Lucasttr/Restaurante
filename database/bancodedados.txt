@@ -1,0 +1,140 @@
+CREATE DATABASE BD_restaurante;
+
+CREATE TABLE Garcom (
+                        Cod_Garcom Int Primary key,
+                        Nome_Garcom Varchar(20),
+                        Usuario Varchar(20),
+                        Senha Varchar(20)
+                    );
+
+CREATE TABLE Cliente (
+                        Cod_Cliente Int Primary key auto_increment,
+                        Nome_Cliente Varchar(20)
+                    );
+
+
+
+
+CREATE TABLE Comida (
+                        Cod_Comida Int Primary key,
+                        Tipo_comida Varchar(1),
+                        Nome_Comida Varchar(20),
+                        Preco_Comida Decimal(7,2)
+                    );
+
+
+
+
+CREATE TABLE Pedido (
+                        Cod_Pedido Int Primary key auto_increment,
+                        Quantidade Int DEFAULT 0,
+                        Cod_Comida Int,
+                        Tipo_comida Int,
+                        Foreign key (Cod_Comida) references Comida (Cod_Comida)
+                    );
+
+
+
+CREATE TABLE Mesa (
+                        Cod_Mesa Int Primary key,
+                        Cod_Garcom Int,
+                        Cod_Cliente Int,
+                        Cod_Abertura Int,
+                        Cod_Fechamento Int,
+                        Cod_Pedido Int,
+                        Foreign key (Cod_Garcom) references Garcom (Cod_Garcom),
+                        Foreign key (Cod_Cliente) references Cliente (Cod_Cliente),
+                        Foreign key (Cod_Abertura) references Abertura (Cod_Abertura),
+                        Foreign key (Cod_Fechamento) references Fechamento (Cod_Fechamento),
+                        Foreign key (Cod_Pedido) references Pedido (Cod_Pedido)
+                    );
+
+
+INSERT INTO Garcom 
+VALUES (1, 'Lucas Teodoro', 'lucas', '123');
+
+LEGENDA CARDAPIO Codigo 1 = Entrada, 2 = Comida e 3 = Bebida.
+
+
+INSERT INTO Comida 
+VALUES (1, 1, 'Bulinho de Bacalhau', 18), (2, 1, 'Medalhão de Mandioca e Frango', 17), (3,1, 'Porção de Mandioca', 12),
+(4, 2, 'Spaghetti à Bolonhesa', 35), (5, 2, 'Lasanha à Bolonhesa', 40), (6, 2, 'Ravioli de Queijo Brie', 48), 
+(7, 2, 'Fettuccine Alfredo', 45), (8, 2, 'Penne à Calabresa', 32), (9, 3, 'Coca Cola Zero', 11), 
+(10, 3, 'Suco de Manga', 8), (11, 3, 'Capirinha de Limão', 18), (12, 3, 'Vinho Rosé Chileno Casa Blanca', 126);
+
+INSERT INTO mesa VALUES (1,null,null,null,null,null),(2,null,null,null,null,null),(3,null,null,null,null,null),(4,null,null,null,null,null),(5,null,null,null,null,null),(6,null,null,null,null,null);
+
+---------------------------------------------------------------------------------------------
+
+
+ALTER TABLE pedido ADD Preco_total_comida decimal (7,2);
+
+CREATE TABLE estatus (
+Cod_Estatus INT Primary Key,
+Estado INT
+);
+
+INSERT INTO estatus 
+VALUES (1, 2), (2, 2), (3, 2), (4, 2), (5, 2), (6, 2);
+
+
+ALTER TABLE mesa
+ADD Cod_Estatus INT AFTER Cod_Pedido
+
+//os bomba update pq insert n funcionou
+UPDATE mesa
+SET Cod_Estatus = 1
+WHERE cod_mesa = 1;
+
+UPDATE mesa
+SET Cod_Estatus = 2
+WHERE cod_mesa = 2;
+
+UPDATE mesa
+SET Cod_Estatus = 3
+WHERE cod_mesa = 3;
+
+UPDATE mesa
+SET Cod_Estatus = 4
+WHERE cod_mesa = 4;
+
+UPDATE mesa
+SET Cod_Estatus = 5
+WHERE cod_mesa = 5;
+
+UPDATE mesa
+SET Cod_Estatus = 6
+WHERE cod_mesa = 6;
+
+ALTER TABLE Pedido
+ADD Nome_comida VARCHAR(255) AFTER Preco_total_comida
+
+ALTER TABLE Pedido ADD Cod_mesa INT;
+
+ALTER TABLE Pedido ADD CONSTRAINT fk_mesa FOREIGN KEY (Cod_mesa) REFERENCES Mesa(Cod_mesa);
+
+
+ALTER TABLE Cliente ADD Total DECIMAL (7,2);
+
+ALTER TABLE estatus ADD mesaid INT;
+
+// Apenas alterar de acordo com a varíavel
+DELETE FROM Pedido WHERE Cod_mesa = 1; 
+
+CREATE TABLE Historico (
+                        Cod_Historico Int Primary key auto_increment,
+                        Data_Abertura TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        Data_Fechamento TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        Cod_Cliente Int,
+                        Cod_Pedido Int,
+                        Cod_Comida Int,
+                        Foreign key (Cod_Cliente) references Cliente (Cod_Cliente),
+                        Foreign key (Cod_Comida) references Comida (Cod_Comida),
+                        Foreign key (Cod_Pedido) references Pedido (Cod_Pedido)
+                    );
+
+
+ALTER TABLE Cliente ADD mesa_cliente INT;
+
+
+

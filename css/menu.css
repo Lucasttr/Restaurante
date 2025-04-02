@@ -1,0 +1,470 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #eae4d6;
+}
+
+.nav {
+  font-family: jua;
+  position: relative;
+  width: 100%;
+  height: 13%;
+  background-color: #783129;
+  display: flex;
+}
+
+@font-face {
+  font-family: Jua;
+  src: url("../font/Jua-Regular.ttf");
+}
+
+/* abre Menu.html */
+ul {
+  display: flex;
+
+  list-style: none;
+
+  color: white;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 20px;
+}
+
+li {
+  margin-left: 10px;
+}
+
+a {
+  text-decoration: none;
+
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.topicos_nav {
+  margin-left: 35px;
+}
+.box {
+  width: 20%;
+
+  height: 320px;
+
+  margin-left: 100px;
+
+  background-color: #8c3212;
+
+  margin: 0 auto;
+
+  border-radius: 25px;
+
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+.box:hover {
+  width: 20.2%;
+  height: 322px;
+}
+.row {
+  font-family: jua;
+  display: flex;
+
+  width: 90%;
+
+  margin: 30px 65px 30px 65px;
+
+  top: 10%;
+
+  position: absolute;
+}
+
+.box2 {
+  width: 20%;
+
+  height: 320px;
+
+  margin-left: 100px;
+
+  background-color: #8c3212;
+
+  margin: 0 auto;
+
+  border-radius: 25px;
+
+  margin-bottom: 100px;
+
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+.box2:hover {
+  width: 20.2%;
+  height: 322px;
+}
+.row2 {
+  font-family: jua;
+  display: flex;
+
+  width: 90%;
+
+  margin: 0 65px 0 65px;
+
+  top: 65%;
+
+  position: absolute;
+}
+
+.box-interna {
+  background-color: #cda254;
+
+  width: 70%;
+
+  height: 40%;
+
+  position: relative;
+
+  margin: 0 auto;
+
+  margin-top: 35px;
+
+  align-items: center;
+
+  justify-content: center;
+
+  display: flex;
+
+  border: 1px solid black;
+}
+
+.box-interna:hover {
+  background-color: #d3ae68;
+}
+
+.titulo {
+  text-align: center;
+  font-weight: 200;
+  margin-top: 20px;
+}
+
+.status {
+  text-align: center;
+
+  color: white;
+
+  font-size: 40px;
+
+  margin-top: 40px;
+}
+/* fecha Menu.html */
+
+/* abre Atualizar_mesa.html */
+.principal_atualiza {
+  position:relative;
+
+  margin-top: 30%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 50%;
+
+  height: 900px;
+
+  background-color: #72321c;
+
+  border-radius: 20px;
+}
+.head_mesa {
+  position: relative;
+   
+  width: 73%;
+
+  top: 40px;
+
+  height: 50px;
+
+  background-color: #cda254;
+
+  border-radius: 15px;
+
+  margin-left: 13%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.titulo_atualiza {
+  font-size: 25px;
+
+  font-family: jua;
+
+
+}
+
+
+.p_atualiza {
+  font-family: jua;
+
+  font-size: 20px;
+
+  color: white;
+}
+
+.linha_atualiza {
+  width: 90%;
+
+  margin-top: 3%;
+}
+
+.button_atualiza {
+  display: block;
+
+  margin: 0 auto;
+
+  width: 300px;
+
+  padding: 16px;
+
+  margin-top: 20px;
+
+  background-color: #ca331d;
+
+  border-radius: 10px;
+
+  border: none;
+
+  color: white;
+
+  font-family: jua;
+
+  font-size: 21px;
+}
+
+.button_atualiza:hover {
+  background-color: #ca341d86;
+
+  width: 310px;
+
+  cursor: pointer;
+}
+
+.box_button {
+  margin-top: 50px;
+}
+
+/* fecha Atualizar_mesa.html */
+
+
+
+/*MESA.HTML*/
+
+.titulo_mesa {
+  font-family: jua;
+  font-size: 2.3em;
+  text-align: center;
+  padding: 10px;
+}
+
+.container {
+  font-family: jua;
+  width: 90%;
+  height: 700px;
+  margin-left: 5%;
+  display: flex;
+}
+
+.pedido {
+  background-color: rgba(114, 50, 28, 1);
+  margin: 10px;
+  width: 50%;
+  border-radius: 10px;
+}
+
+.pedido h1 {
+  color: white;
+  text-align: center;
+  font-weight: 200;
+}
+
+.input-container {
+  width: 100%;
+  height: 80px;
+  margin: 50px 0;
+}
+
+.adicionar {
+  position: relative;
+  margin: 0 20px;
+  width: 80px;
+  height: 80px;
+}
+
+.adicionar:hover {
+  cursor: pointer;
+  background-color: rgba(205, 162, 84, 1);
+  border-radius: 50%;
+}
+
+.input {
+  position: relative;
+  width: 50%;
+  height: 80px;
+  bottom: 30px;
+  font-family: jua;
+  font-size: 2em;
+  padding-left: 30px;
+  border-radius: 20px;
+  background-color: rgba(205, 162, 84, 1);
+  outline: none;
+  border: none;
+  color: black;
+}
+
+.input:hover {
+  cursor: pointer;
+  background-color: rgb(226, 183, 103);
+  font-size: 2.3em;
+}
+
+.quantidade {
+  position: relative;
+  width: 13%;
+  height: 80px;
+  bottom: 30px;
+  margin: 0 20px;
+  font-family: jua;
+  font-size: 2em;
+  padding-left: 30px;
+  border-radius: 20px;
+  background-color: rgba(205, 162, 84, 1);
+  outline: none;
+  border: none;
+}
+
+.quantidade:hover {
+  cursor: pointer;
+  background-color: rgb(226, 183, 103);
+  font-size: 2.3em;
+}
+
+option {
+  font-family: jua;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1em;
+  background-color: rgba(205, 162, 84, 1);
+}
+
+.container2 {
+  width: 50%;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden; 
+}
+
+.dados {
+  background-color: rgba(114, 50, 28, 1);
+  border: 2px solid transparent;
+  height: 550px;
+  border-radius: 10px;
+}
+
+.dados h1 {
+  color: white;
+  text-align: center;
+  font-weight: 200;
+}
+
+.botão {
+  font-family: jua;
+  font-size: 2em;
+  background-color: rgba(202, 51, 29, 1);
+  width: 100%;
+  height: 80px;
+  margin: 25px 0 0 0;
+  border-radius: 10px;
+}
+
+.botão:hover {
+  cursor: pointer;
+  font-size: 2.3em;
+  background-color: rgb(223, 78, 56);
+}
+
+/*MENU CARDAPIO*/
+
+.container_cardapio {
+  background-color: rgba(205, 162, 84, 1);
+  font-family: jua;
+  width: 43%;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.container_cardapio img {
+  height: 95%;
+  margin-top: 20px;
+  border-radius: 20px;
+
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+}
+
+.form-group {
+
+  display: flex;
+  bottom: 30px;
+  font-family: jua;
+  font-size: 1.2em;
+  padding: 30px;
+  background-color: #72321c;
+  color: black;
+}
+
+.status_fechado {
+  text-align: center;
+
+  color: rgba(205, 162, 84, 1);
+
+  font-size: 40px;
+
+  margin-top: 40px;
+}
+
+
+.input_cliente{
+  display: flex;
+  bottom: 30px;
+  padding: 20px;
+  background-color: #72321c;
+}
+
+.input_cliente input{
+    font-family: jua;
+    margin-left: 7%;
+    width: 80%; 
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: rgba(205, 162, 84, 1);
+    border-radius: 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    color: black;
+    font-size: 1.3em;
+}
+
+.input_cliente input:hover{
+  cursor: pointer;
+  background-color: rgb(226, 183, 103);
+}

@@ -1,0 +1,176 @@
+*{ /*ajuste de borda*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-weight: 300px;
+    font-style: normal;
+    backdrop-filter: blur(5px);
+      
+}
+body{
+    background-image: url(../img/salao-da-margheritta.jpg);
+    background-size: cover; /*cobre toda a tela com a imagem*/
+    background-position: center; /*posiciona no centro da imagem*/
+    min-height: 100vh; /*cobre 100% da altura da tela*/
+    display: flex; 
+    justify-content: center; /*alinhamento horizontal*/
+    align-items: center; /*alinhamento vertical*/
+}
+
+@font-face{
+    font-family: Jua;
+    src: url("../font/Jua-Regular.ttf");
+}
+
+.container{
+    border: 2px solid rgb(255, 255, 255, 0.20);
+    background-color: rgba(120, 49, 41, 1);
+    width: 500px;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+}
+
+h1{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 2.3em;
+}
+/*
+.option-container{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    margin: 40px 0;
+    background-color: white;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 500;
+    border: solid white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px gray;
+}
+
+.option-container:hover{
+    cursor: pointer;
+    background-color: rgb(245, 245, 245);
+    font-size: 1.4em;
+}
+
+.option-container a{
+    color: black;
+    text-decoration: none;
+}
+
+.option-container p{
+    position: relative;
+    padding-top: 15px;
+    color: black;
+    text-decoration: none;
+}
+
+.cadastrar-container{
+    display: flex;
+    justify-content: left;
+    justify-items: center;
+    margin-bottom: 40px;
+}
+
+#logout-img{
+    position: relative;
+    margin-left: 90%;
+    width: 35px;
+    opacity: 70%;
+}
+
+p{
+    margin-left: 20px;
+    margin-right: 10px;
+    color: white;
+}
+a{
+    text-decoration: none;
+    flex-direction: row;
+    color: white;
+    font-weight: 500;
+}
+a:hover{
+   color: rgba(255, 255, 255, 0.3);
+}
+
+
+option{
+    background-color: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1em;
+}
+*/
+.input-container{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-container input{
+    width: 100%; 
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: white;
+    border-radius: 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    color: black;
+    font-size: 1.3em;
+}
+
+.input-container input:hover{
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.input-container input::placeholder{
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 20px;
+}
+
+.input-container img{
+    position: absolute;
+    right: 15px;
+    top: 25%;
+    width: 25px;
+    opacity: 35%;
+}
+
+.submit-button{
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 1em;
+    font-weight: 500;
+    box-shadow: 0px 0px 10px gray;
+}
+
+.submit-button:hover{
+    cursor: pointer;
+    background-color: rgb(233, 233, 233);
+}
+
+.input-container select{
+    width: 100%; 
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding-left: 20px;
+    color: white;
+    font-size: 1.3em;
+    margin-top: 10px;
+}
