@@ -30,6 +30,7 @@ PHP: Backend para gerenciar as operações do sistema, como consultas ao banco d
 MySQL: Banco de dados para armazenar informações sobre mesas, pedidos, clientes e histórico.
 
 Estrutura do Projeto
+
 O projeto está organizado da seguinte forma:
 
 /css          -> Arquivos de estilo (CSS)
